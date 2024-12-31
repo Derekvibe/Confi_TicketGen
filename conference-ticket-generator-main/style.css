@@ -1,0 +1,112 @@
+/* Import fonts at the bottom for better performance */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #f0f0f0;
+  /* Fallback background color */
+  background-image: url('/conference-ticket-generator-main/assets/images/background-desktop.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Heading styles */
+.heading_1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.heading_1 img {
+  max-width: 100%;
+}
+
+.heading_2 {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.heading_2 h1 {
+  font-size: 50px;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700;
+}
+
+.heading_2 p {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
+}
+
+/* Form Section */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: 3% auto;
+  font-family: 'Inconsolata', sans-serif;
+}
+
+form input:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.Avatar_label {
+  font-size: large;
+}
+
+.Avatar_img {
+  width: 80%;
+  box-sizing: border-box;
+  border: 1px dashed white;
+  padding: 5% 0;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.for_name, .for_mail, .git {
+  margin-top: 20px;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+.for_name input, .for_mail input, .git input {
+  width: 80%;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+form input[type="submit"] {
+  width: 80%;
+  margin-top: 20px;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: large;
+  font-weight: 600;
+  color: black;
+  background-color: orange;
+  padding: 8px;
+  border-radius: 10px;
+  border-color:rgba(255, 255, 255, 0.2);
+}
+
+
+form input[type="submit"]:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
