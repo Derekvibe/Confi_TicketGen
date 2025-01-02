@@ -6,52 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Generate your conference ticket for Coding Conf 2025 with this easy-to-use tool.">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Conference ticket generator</title>
+  <title>Conference Ticket Generator | Coding Conf 2025</title>
 </head>
 
 <body>
-  <div class="heading_1">
+  <div class="logo-container">
     <img src="./assets/images/logo-full.svg" alt="Conference logo">
   </div>
 
-  <div class="heading_2">
+  <div class="hero-text">
     <h1>Your Journey to Coding Conf <br /> 2025 Starts Here!</h1>
     <p>Secure your spot at next year's biggest coding conference.</p>
   </div>
 
-  <form novalidate>
-    <div class="Avatar">
-      <label for="Userimage" class="Avatar_label">Upload Avatar</label>
-      <div class="Avatar_img">
-        <input type="file" id="Userimage" accept="image/*" aria-label="Upload your avatar" required>
-        <p>Drag and drop or click to upload</p>
+  <form id="mainForm">
+    <div class="avatar">
+      <label for="Userimage" class="avatar-label">Upload Avatar</label>
+      
+      <div class="avatar-img">
+        <input type="file" id="Userimage" accept="image/*" aria-label="Upload your avatar">
+        <p id="avatarHelp">Drag and drop or click to upload</p>
       </div>
     </div>
 
-    <div class="for_name">
-      <label for="Name">Full Name</label>
-      <input type="text" id="Name" name="fullName" required>
+    <div class="form-name">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName">
+      
+      <div class="icon-container">
+        <div class="exclam">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="error"></div>
+      </div>
+
     </div>
 
-    <div class="for_mail">
+    <div class="form-mail">
       <label for="Mail">Email Address</label>
-      <input type="email" id="Mail" name="email" placeholder="example@email.com" required>
+      <input type="email" id="Mail" name="email" placeholder="example@email.com">
+
+      <div class="icon-container">
+        <div class="exclam">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="error"></div>
+        
+      </div>
+      
     </div>
 
     <div class="git">
       <label for="GitHub">GitHub Username</label>
-      <input type="text" id="GitHub" name="githubUsername" placeholder="@yourusername" required>
+      <input type="text" id="gitHub" name="githubUsername" placeholder="@yourusername">
+      
+      <div class="icon-container">
+        <div class="exclam">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div class="check">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="error"></div>
+      
+      </div>
     </div>
 
     <input type="submit" value="Generate My Ticket" id="submitBtn">
   </form>
 
-  <div id="ticket" style="display: none;">
-    <p>Congrats, <span id="displayName"></span>! Your ticket is ready.</p>
+
+
+
+  <div id="ticket">
+
+    
+    
+    <!-- <p>Congrats, <span id="displayName"></span>! Your ticket is ready.</p>
+    
     <p>We've emailed your ticket to <span id="displayEmail"></span> and will send updates in the run-up to the event.
     </p>
-    <p><strong>Coding Conf</strong><br>Jan 31, 2025 / Austin, TX</p>
+    <p><strong>Coding Conf</strong><br>Jan 31, 2025 / Austin, TX</p> -->
   </div>
 
   <script src="app.js"></script>

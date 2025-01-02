@@ -20,28 +20,28 @@ body {
 }
 
 /* Heading styles */
-.heading_1 {
+.logo-container {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
 
-.heading_1 img {
+.logo-container img {
   max-width: 100%;
 }
 
-.heading_2 {
+.hero-text {
   margin-top: 5%;
   text-align: center;
 }
 
-.heading_2 h1 {
+.hero-text h1 {
   font-size: 50px;
   font-family: 'Inconsolata', monospace;
   font-weight: 700;
 }
 
-.heading_2 p {
+.hero-text p {
   padding-top: 20px;
   font-size: 20px;
   font-family: 'Inconsolata', sans-serif;
@@ -49,7 +49,7 @@ body {
 }
 
 /* Form Section */
-form {
+#mainForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,15 +58,15 @@ form {
   font-family: 'Inconsolata', sans-serif;
 }
 
-form input:hover {
+#mainForm input:hover {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.Avatar_label {
+.avatar-label {
   font-size: large;
 }
 
-.Avatar_img {
+.avatar-img {
   width: 80%;
   box-sizing: border-box;
   border: 1px dashed white;
@@ -76,14 +76,36 @@ form input:hover {
   border-radius: 10px;
 }
 
-.for_name, .for_mail, .git {
+.form-name, .form-mail, .git {
   margin-top: 20px;
   font-size: large;
   display: flex;
   flex-direction: column;
 }
 
-.for_name input, .for_mail input, .git input {
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.check {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.exclam {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.form-name input, .form-mail input, .git input {
   width: 80%;
   padding: 8px;
   background-color: transparent;
@@ -92,7 +114,7 @@ form input:hover {
   margin-top: 4px;
 }
 
-form input[type="submit"] {
+#mainForm input[type="submit"] {
   width: 80%;
   margin-top: 20px;
   font-family: 'Inconsolata', sans-serif;
@@ -106,7 +128,10 @@ form input[type="submit"] {
 }
 
 
-form input[type="submit"]:hover {
+#mainForm input[type="submit"]:hover {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+
+/* SMALL TICKET */
